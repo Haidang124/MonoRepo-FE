@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "projects": {
+    "chat": "libs/chat",
+    "ecommerce": "apps/ecommerce",
+    "ecommerce-e2e": "apps/ecommerce-e2e",
+    "project-management": "apps/project-management",
+    "project-management-e2e": "apps/project-management-e2e"
+  }
+}
