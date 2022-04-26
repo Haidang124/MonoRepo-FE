@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@reactjs/chat": ["libs/chat/src/index.ts"]
+      "@reactjs/chat": ["libs/chat/src/index.ts"],
+      "@reactjs/metronic-template": ["libs/metronic-template/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
