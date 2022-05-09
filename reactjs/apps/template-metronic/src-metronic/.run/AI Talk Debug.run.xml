@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="AI Talk Debug" type="JavascriptDebugType" editBeforeRun="true" uri="http://localhost:3000" useFirstLineBreakpoints="true">
+    <method v="2">
+      <option name="LaunchBrowser.Before.Run" url="localhost:3000" />
+    </method>
+  </configuration>
+</component>

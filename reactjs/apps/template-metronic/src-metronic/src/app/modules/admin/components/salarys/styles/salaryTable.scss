@@ -1,0 +1,39 @@
+.salary-table {
+  font-size: 13.65px;
+  font-weight: 500;
+  font-family: Poppins, Helvetica, 'sans-serif';
+  -webkit-font-smoothing: antialiased;
+  padding: 1rem;
+  .salary-table-body {
+    border-top: 1px dashed rgb(239, 242, 245);
+    th,
+    td {
+      border: 1px solid #eee;
+    }
+  }
+  table {
+    border-spacing: 0;
+    width: 100%;
+    tbody {
+      border-top: 1px solid #eee;
+    }
+    tr {
+      :last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+    th,
+    td {
+      border: 1px solid #eee;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0;
+      padding: 0.5rem;
+      :last-child {
+        border-right: 0;
+      }
+    }
+  }
+}

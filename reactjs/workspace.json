@@ -6,6 +6,8 @@
     "ecommerce-e2e": "apps/ecommerce-e2e",
     "metronic-template": "libs/metronic-template",
     "project-management": "apps/project-management",
-    "project-management-e2e": "apps/project-management-e2e"
+    "project-management-e2e": "apps/project-management-e2e",
+    "template-metronic": "apps/template-metronic",
+    "template-metronic-e2e": "apps/template-metronic-e2e"
   }
 }

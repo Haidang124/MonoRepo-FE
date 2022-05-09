@@ -1,0 +1,30 @@
+.salary-grade-form {
+  .text-error {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  .footer {
+    margin-top: 20px;
+  }
+  .form-detail {
+    .form-label {
+      margin-right: 2rem;
+      white-space: nowrap;
+      text-align: right;
+      min-width: 120px;
+    }
+    .fa-toggle-icon {
+      font-size: 28px;
+    }
+    .fa-toggle-on {
+      color: #009ef7;
+    }
+  }
+  .calculate-salary {
+    .calculate-salary-number {
+      display: flex;
+    }
+  }
+}

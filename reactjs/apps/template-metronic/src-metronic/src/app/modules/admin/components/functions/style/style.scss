@@ -1,0 +1,83 @@
+.function {
+
+  .tree {
+    position: relative;
+    margin-top: 5px;
+
+    .form-control {
+      width: 100%;
+    }
+
+    .tree-content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .tree-name {
+      margin-left: 15px;
+      font-weight: bold;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tree-btn {
+      margin-left: 15px;
+      size: 15px;
+    }
+
+    .api-endpoint-name {
+      margin-left: 25px;
+      line-height: 25px;
+    }
+
+    .tree-line {
+      position: absolute;
+      top: 25px;
+      left: 8px;
+      display: block;
+      width: 0;
+      height: calc(100% - 26px);
+      border-left: 1px dashed rgb(200, 200, 200);
+    }
+
+    .tree-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .btn-disabled {
+      opacity: 0.4;
+    }
+
+    .skill-status {
+      min-width: 35px;
+      padding: 5px;
+    }
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .bg-color-highlight {
+    display: inline-block;
+    background-color: #82cdf836 !important;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .pointer-cursor {
+    cursor: pointer;
+  }
+}

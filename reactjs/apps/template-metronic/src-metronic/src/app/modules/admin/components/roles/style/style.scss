@@ -1,0 +1,99 @@
+.role-container,
+.function-detail {
+  .tree {
+    position: relative;
+    margin-top: 5px;
+
+    .tree-body {
+      margin-left: 40px;
+    }
+
+    .folder-icon-close {
+      color: #8eaabc !important;
+    }
+
+    .folder-icon-open {
+      color: #ffc107 !important;
+    }
+
+    .tree-name {
+      margin-left: 15px;
+      font-weight: bold;
+      display: inline-block;
+      cursor: pointer;
+
+      &.active {
+        color: #ffc107;
+      }
+    }
+
+    .tree-btn {
+      display: flex;
+      margin-left: 1rem;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .tree-line {
+      position: absolute;
+      top: 25px;
+      left: 8px;
+      display: block;
+      width: 0;
+      height: calc(100% - 26px);
+      border-left: 1px dashed rgb(200, 200, 200);
+    }
+
+    .tree-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .function-checkbox {
+      margin-left: 0.75rem;
+      cursor: pointer;
+    }
+
+    .order-btn {
+      cursor: all-scroll;
+    }
+
+    .btn-disabled {
+      opacity: 0.4;
+    }
+
+    .skill-status {
+      min-width: 35px;
+      padding: 5px;
+    }
+  }
+
+  .tree-loop-scroll {
+    max-height: calc(100vh - 260px);
+    overflow: auto;
+  }
+
+  .bg-color-highlight {
+    display: inline-block;
+    background-color: #82cdf836 !important;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .pointer-cursor {
+    cursor: pointer;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+}

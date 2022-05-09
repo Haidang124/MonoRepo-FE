@@ -1,0 +1,50 @@
+.salary-form {
+  .footer {
+    margin-top: 20px;
+  }
+  .form-detail {
+    .form-label {
+      margin-right: 2rem;
+      white-space: nowrap;
+      text-align: right;
+      min-width: 120px;
+    }
+    .rate-salary-insurance {
+      .form-label {
+        margin-right: 2rem;
+        white-space: nowrap;
+        text-align: right;
+        min-width: 150px;
+      }
+      .rate-salary-insurance-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .rate-company {
+          padding-right: 2rem;
+          border-right: 1.5px solid;
+        }
+        .rate-employee {
+          padding-left: 2rem;
+        }
+      }
+    }
+    .fa-toggle-icon {
+      font-size: 28px;
+    }
+    .fa-toggle-on {
+      color: #009ef7;
+    }
+  }
+  .right-info {
+    .fa-times {
+      color: #f1416c;
+      font-size: 15px;
+    }
+    .btn-add {
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+}

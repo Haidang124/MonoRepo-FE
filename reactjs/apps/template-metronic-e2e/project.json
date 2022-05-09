@@ -1,0 +1,28 @@
+{
+  "root": "apps/template-metronic-e2e",
+  "sourceRoot": "apps/template-metronic-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/template-metronic-e2e/cypress.json",
+        "devServerTarget": "template-metronic:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "template-metronic:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/template-metronic-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["template-metronic"]
+}

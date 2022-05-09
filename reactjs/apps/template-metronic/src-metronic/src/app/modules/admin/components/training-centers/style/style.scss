@@ -1,0 +1,67 @@
+.center-form-page {
+  font-weight: 500;
+  .form-main {
+    .center-form-content {
+      .represent,
+      .account,
+      .center-info {
+        .form-label {
+          margin-right: 2rem;
+          white-space: nowrap;
+          text-align: right;
+          min-width: 100px;
+        }
+        .title-section {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          i {
+            font-size: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .btn-primary {
+        margin-left: 20px;
+      }
+    }
+  }
+  .service-package-info {
+    padding: 2rem 0.75rem;
+    .service-package-form {
+      margin-top: 2rem;
+      .form-label {
+        white-space: nowrap;
+        min-width: 125px;
+      }
+    }
+    .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.table-actions-cell {
+  i {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .center-form-page {
+    .form {
+      display: flex;
+      flex-direction: column;
+      .service-package-info {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

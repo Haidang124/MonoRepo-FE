@@ -1,0 +1,60 @@
+.class-form {
+  .text-error {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  .footer {
+    margin-top: 20px;
+  }
+  .btn-remove-schedule {
+    max-width: 30px;
+  }
+  .form-label {
+    margin-right: 2rem;
+    white-space: nowrap;
+    min-width: 120px;
+  }
+  .btn-add {
+    i {
+      font-size: 20px;
+    }
+  }
+  .form-detail {
+    .form-label {
+      text-align: right;
+    }
+    #kt_accordion_3_item_3 {
+      .form-label {
+        min-width: 65px;
+      }
+    }
+  }
+  .fa-times {
+    color: #f1416c;
+    font-size: 15px;
+  }
+  .history-action {
+    .history-main {
+      display: flex;
+      justify-content: center;
+      margin-left: 15px;
+      img {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+    }
+    .history-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 15px;
+      font-size: 14px;
+      .time-action {
+        font-style: italic;
+      }
+    }
+  }
+}

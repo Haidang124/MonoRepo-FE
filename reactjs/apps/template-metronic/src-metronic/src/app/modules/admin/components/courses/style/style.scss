@@ -1,0 +1,44 @@
+.center-info {
+  .form-label {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    white-space: nowrap;
+    text-align: right;
+    min-width: 150px;
+  }
+  .title-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+.right-info {
+  .form-label {
+    margin-top: 1rem;
+    margin-right: 2rem;
+    white-space: nowrap;
+    text-align: right;
+    min-width: 120px;
+  }
+  .title-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+.btn-primary {
+  margin-left: 20px;
+}
+.error-text {
+  color: red;
+  font-size: 13px;
+  font-style: italic;
+}

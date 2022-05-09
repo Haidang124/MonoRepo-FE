@@ -1,0 +1,95 @@
+.btn-add {
+    position: relative;
+    cursor: pointer;
+
+    i {
+        font-size: 25px;
+    }
+
+    .examTeacher {
+        display: none;
+    }
+
+    .examTeacher.dis-block {
+        display: block !important;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background-color: #ccc;
+        padding: 4px;
+        border-radius: 10px;
+        width: max-content;
+
+        .teacher {
+            padding: 4px;
+
+            &:hover {
+                background-color: #fff;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.show-teacher {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+.errors-text {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.color-blue {
+    color: rgb(70, 148, 236) !important;
+    cursor: pointer;
+}
+
+.formatDate {
+    border: 1px solid #E4E6EF;
+    padding: 0.75rem 1rem;
+    border-radius: 0.475rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-icon {
+    i {
+
+        font-size: 23px;
+    }
+}
+
+.filter-wrapper{
+    position: relative;
+    .filter{
+      background-color: #fff;
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      width: max-content;
+      z-index: 1;
+      box-shadow: 1px 3px 3px #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      right : 0;
+    }
+  }
+
+
+
+@media only screen and (max-width : 1199px) {
+    .col-xl-4.col-12 {
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,46 @@
+.tentant-form {
+  .text-error {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  .form-detail {
+    .form-label {
+      margin-right: 2rem;
+      white-space: nowrap;
+      text-align: right;
+      min-width: 120px;
+    }
+  }
+  .history-action {
+    .history-main {
+      display: flex;
+      justify-content: center;
+      margin-left: 15px;
+      img {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+    }
+    .history-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 15px;
+      font-size: 14px;
+      .time-action {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+@media only screen  and (max-width : 1199px) {
+  .tentant-form{
+    .col-xl-4.col-12{
+      margin-top: 2rem;
+    }
+  }
+}
