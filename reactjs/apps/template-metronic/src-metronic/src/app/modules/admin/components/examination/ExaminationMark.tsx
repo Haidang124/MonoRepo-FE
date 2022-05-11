@@ -1,9 +1,9 @@
 import moment from 'moment'
-import React, {useEffect, useState} from 'react'
-import {useLocation} from 'react-router-dom'
-import {KTCardBody, KTSVG} from '../../../../../_metronic/helpers'
+import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { KTCardBody } from '../../../../../_metronic/helpers'
 import { Examination } from '../../models/ExaminatonModel'
-import {getExaminationById} from '../../redux/ExaminationCRUD'
+import { getExaminationById } from '../../redux/ExaminationCRUD'
 import ExaminationMarkHeader from './ExaminationMarkHeader'
 
 const ExaminationMark: React.FC = () => {
@@ -11,6 +11,7 @@ const ExaminationMark: React.FC = () => {
   const [examination, setExamination] = useState<Examination>({} as Examination)
   useEffect(() => {
     getExaminationById(state).then((res) => setExamination(res.data.data))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {

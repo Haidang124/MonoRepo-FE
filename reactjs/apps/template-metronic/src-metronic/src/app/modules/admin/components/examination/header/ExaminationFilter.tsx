@@ -1,9 +1,8 @@
-import { isEmpty } from "lodash";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { KTSVG } from "../../../../../../_metronic/helpers";
 import { ExamMethodOptions, ExamTypeOptions } from "../../../models/ExaminatonModel";
-import { getExaminations, getExaminationsFromParams } from "../../../redux/ExaminationCRUD";
+import { getExaminationsFromParams } from "../../../redux/ExaminationCRUD";
 import { getMasterSubjects } from "../../../redux/MasterDataCRUD";
 import { useExaminationContext } from "../ExaminationContext";
 
