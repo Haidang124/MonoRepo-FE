@@ -1,42 +1,39 @@
-import { isEmpty } from 'lodash'
+import {isEmpty} from 'lodash'
 import moment from 'moment'
 import React, {useEffect, useState} from 'react'
 import {shallowEqual, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {RootState} from '../../../../setup'
 import {KTCardBody} from '../../../../_metronic/helpers'
-import { getPositions } from '../../admin/redux/PositionCRUD'
+import {getPositions} from '../../admin/redux/PositionCRUD'
 import {UserModel} from '../../auth/models/UserModel'
-import { StatusOptions } from '../modal/EmployeeModal'
+import {StatusOptions} from '../modal/EmployeeModal'
 import {deleteEmployee, getEmployees} from '../redux/EmployeeCRUD'
 import {useEmployeeContext} from './EmployeeContext'
 
 const EmployeeTable: React.FC = () => {
   const {employees, setEmployees} = useEmployeeContext()
   const user = useSelector<RootState, UserModel>(({auth}) => auth.user as UserModel, shallowEqual)
-  const [positionOptions,setPositionOptions] = useState([{value : '', label : ''}])
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [positionOptions, setPositionOptions] = useState([{value: '', label: ''}])
   const navigate = useNavigate()
-
-
 
   useEffect(() => {
     getEmployees(user.id).then((res) => setEmployees(res.data.data))
   }, [user, setEmployees])
 
-
   useEffect(() => {
-    getPositions().then(res => {
-      if(!isEmpty(res.data.data)){
-          const options = res.data.data.map((i : any) => ({value : i.id, label : i.name}))
-          setPositionOptions(options)
+    getPositions().then((res) => {
+      if (!isEmpty(res.data.data)) {
+        const options = res.data.data.map((i: any) => ({value: i.id, label: i.name}))
+        setPositionOptions(options)
       }
-  })
-  } ,[])
+    })
+  }, [])
 
-  const findStatus = (status : number) => {
-    return StatusOptions.find(i => i.value === status)
+  const findStatus = (status: number) => {
+    return StatusOptions.find((i) => i.value === status)
   }
-  
 
   const handleDelete = (id: string, fullName: string) => {
     if (window.confirm(`Xóa nhân viên ${fullName}?`)) {
@@ -66,7 +63,7 @@ const EmployeeTable: React.FC = () => {
             </thead>
             <tbody className='fs-6'>
               {employees?.length > 0 ? (
-                employees?.map((element : any, index : number) => (
+                employees?.map((element: any, index: number) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
                     <td>{element.user?.fullName}</td>
@@ -75,7 +72,13 @@ const EmployeeTable: React.FC = () => {
                     <td>Phòng ban</td>
                     <td>{element.user?.phoneNumber}</td>
                     <td>{element.user?.email}</td>
-                    <td>{!isEmpty(element.workingInfos) ? element.workingInfos[0].workType ? `Bán thời gian` : `Toàn thời gian ` : ''}</td>
+                    <td>
+                      {!isEmpty(element.workingInfos)
+                        ? element.workingInfos[0].workType
+                          ? `Bán thời gian`
+                          : `Toàn thời gian `
+                        : ''}
+                    </td>
                     <td>
                       <div className='center-actions-cell'>
                         <i

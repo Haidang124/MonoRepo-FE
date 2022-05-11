@@ -1,0 +1,82 @@
+{
+  "root": "apps/template-metronic",
+  "sourceRoot": "apps/template-metronic/src-metronic",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/template-metronic",
+        "index": "apps/template-metronic/src-metronic/public/index.html",
+        "baseHref": "/",
+        "main": "apps/template-metronic/src-metronic/src/index.tsx",
+        "polyfills": "apps/template-metronic/src-metronic/src/polyfills.ts",
+        "tsConfig": "apps/template-metronic/tsconfig.app.json",
+        "assets": [
+          "apps/template-metronic/src-metronic/favicon.ico"
+        ],
+        "styles": ["apps/template-metronic/src-metronic/src/index.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/template-metronic/src-metronic/environments/environment.ts",
+              "with": "apps/template-metronic/src-metronic/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "template-metronic:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "template-metronic:build:development"
+        },
+        "production": {
+          "buildTarget": "template-metronic:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/template-metronic/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/template-metronic"],
+      "options": {
+        "jestConfig": "apps/template-metronic/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

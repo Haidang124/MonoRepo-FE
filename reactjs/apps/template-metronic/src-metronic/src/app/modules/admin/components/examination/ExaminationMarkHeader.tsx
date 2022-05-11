@@ -1,8 +1,6 @@
-import {KTSVG} from '../../../../../_metronic/helpers'
-import {useNavigate} from 'react-router-dom'
+import { KTSVG } from '../../../../../_metronic/helpers'
 
 const ExaminationMarkHeader = () => {
-  const navigate = useNavigate()
   return (
     <div className='d-flex align-items-center justify-content-between mx-6 pt-6'>
       <div className='d-flex align-items-center position-relative my-1'>

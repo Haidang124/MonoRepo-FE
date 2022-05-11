@@ -1,25 +1,24 @@
-import React, {useEffect, useState} from 'react'
-import {Field, Form, Formik} from 'formik'
-import {Button, Col, Row} from 'react-bootstrap'
-import Select from 'react-select'
-import './style/style.scss'
-import * as Yup from 'yup'
-import {toast} from 'react-toastify'
-import {useLocation, useNavigate} from 'react-router-dom'
-import { Examination, ExamMethodOptions, ExamTypeOptions } from '../../models/ExaminatonModel'
-import SVG from 'react-inlinesvg'
-import {toAbsoluteUrl} from '../../../../../_metronic/helpers'
-import {isEmpty, isNull} from 'lodash'
-import {getMasterSubjects} from '../../redux/MasterDataCRUD'
-import {getAllClasses} from '../../../customer/redux/ClassCRUD'
-import {createExaminations, getExaminationById, updateExamination} from '../../redux/ExaminationCRUD'
-import {getAllTeacher} from '../../../customer/redux/TeacherCRUD'
-import {getAllClassrooms} from '../../redux/ClassroomCRUD'
-import {initExaminations} from './ExaminationContext'
-import {shallowEqual, useSelector} from 'react-redux'
-import {UserModel} from '../../../auth/models/UserModel'
-import {RootState} from '../../../../../setup'
+import { Field, Form, Formik } from 'formik'
+import { isEmpty, isNull } from 'lodash'
 import moment from 'moment'
+import React, { useEffect, useState } from 'react'
+import { Button, Col, Row } from 'react-bootstrap'
+import SVG from 'react-inlinesvg'
+import { shallowEqual, useSelector } from 'react-redux'
+import { useLocation, useNavigate } from 'react-router-dom'
+import Select from 'react-select'
+import { toast } from 'react-toastify'
+import { RootState } from '../../../../../setup'
+import { toAbsoluteUrl } from '../../../../../_metronic/helpers'
+import { UserModel } from '../../../auth/models/UserModel'
+import { getAllClasses } from '../../../customer/redux/ClassCRUD'
+import { getAllTeacher } from '../../../customer/redux/TeacherCRUD'
+import { Examination, ExamMethodOptions, ExamTypeOptions } from '../../models/ExaminatonModel'
+import { getAllClassrooms } from '../../redux/ClassroomCRUD'
+import { createExaminations, getExaminationById, updateExamination } from '../../redux/ExaminationCRUD'
+import { getMasterSubjects } from '../../redux/MasterDataCRUD'
+import { initExaminations } from './ExaminationContext'
+import './style/style.scss'
 
 const ExaminationForm: React.FC = () => {
 
@@ -106,6 +105,7 @@ const ExaminationForm: React.FC = () => {
         setTeachers(list)
       }
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const validate = (values : any) => {
